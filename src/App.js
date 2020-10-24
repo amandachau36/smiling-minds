@@ -1,10 +1,13 @@
-import { Button } from '@material-ui/core';
 import './App.css';
+import Button from 'react-bootstrap/Button';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import React from "react";
+
 
 function App() {
   return (
     <div className="App">
-      <Button color="primary">Hello Team!</Button>
+        <Button variant="primary">Primary</Button>{' '}
     </div>
   );
 }
