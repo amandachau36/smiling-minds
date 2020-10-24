@@ -6,10 +6,10 @@ class Journal extends Component {
     render() {
         return (
             <div>
-                <h1>Journal</h1>
+                <h4>Take a moment to express your thoughts and feelings</h4>
                 <Form.Group>
-                    <Form.Label>Example textarea</Form.Label>
-                    <Form.Control as="textarea" rows={3} />
+                    <Form.Label>maybe we can put a calendar here</Form.Label>
+                    <Form.Control as="textarea" rows={5} />
                 </Form.Group>
             </div>
         );

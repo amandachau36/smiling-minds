@@ -1,35 +1,24 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, {Component} from "react";
 import Rating from 'react-rating';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faSmileBeam, faSmile, faFrown, faSadTear, faMeh } from '@fortawesome/free-solid-svg-icons';
+import { faSmileBeam as faSmileBeamRegular, faSmile as faSmileRegular, faMeh as faMehRegular, faFrown as faFrownRegular, faSadTear as faSadTearRegular} from '@fortawesome/free-regular-svg-icons';
 import 'font-awesome/css/font-awesome.min.css';
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 
-class ResetRating extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = {value: 0};
-  
-      this.handleClick = this.handleClick.bind(this);
-    }
-  
-    handleClick(event) {
-      this.setState({value: undefined});
-    }
+library.add(faSmile, faSmileBeam, faFrown, faSadTear, faMeh, faSmileBeamRegular, faSmileRegular, faFrownRegular, faMehRegular, faSadTearRegular);
+
+class ResetRating extends Component {
   
     render() {
       return (
         <div>
-          {<Rating // {...this.props} initialRating={this.state.value}
-          stop={5}
-          // can't seem to get the grin emoji to render?
-            emptySymbol={['far fa-grin-beam fa-2x', 'fa fa-heart-o fa-2x']}
-            fullSymbol={['fas fa-grin-beam fa-2x', 'fa fa-heart fa-2x']}
+          {<Rating
+            emptySymbol={[<FontAwesomeIcon icon={['far','sad-tear']}/>, <FontAwesomeIcon icon={['far','frown']}/>, <FontAwesomeIcon icon={['far','meh']}/>, <FontAwesomeIcon icon={['far','smile']}/>, <FontAwesomeIcon icon={['far','smile-beam']}/> ]}
+            fullSymbol={[<FontAwesomeIcon icon="sad-tear"/>, <FontAwesomeIcon icon="frown"/>, <FontAwesomeIcon icon="meh"/>, <FontAwesomeIcon icon="smile"/>, <FontAwesomeIcon icon="smile-beam"/> ]}
         />}
-        {/* { <Rating
-            emptySymbol="fa fa-star-o fa-2x"
-            fullSymbol="fa fa-star fa-2x"
-        /> } */}
-          <button onClick={this.handleClick}>Just a button</button>
         </div>
       );
     }
