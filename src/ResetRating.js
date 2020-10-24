@@ -6,6 +6,7 @@ import { faSmileBeam, faSmile, faFrown, faSadTear, faMeh } from '@fortawesome/fr
 import { faSmileBeam as faSmileBeamRegular, faSmile as faSmileRegular, faMeh as faMehRegular, faFrown as faFrownRegular, faSadTear as faSadTearRegular} from '@fortawesome/free-regular-svg-icons';
 import 'font-awesome/css/font-awesome.min.css';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import './App.css';
 
 
 library.add(faSmile, faSmileBeam, faFrown, faSadTear, faMeh, faSmileBeamRegular, faSmileRegular, faFrownRegular, faMehRegular, faSadTearRegular);
@@ -15,24 +16,18 @@ class ResetRating extends Component {
     render() {
       return (
         <div>
-          {<Rating
-            emptySymbol={[<FontAwesomeIcon icon={['far','sad-tear']}/>, <FontAwesomeIcon icon={['far','frown']}/>, <FontAwesomeIcon icon={['far','meh']}/>, <FontAwesomeIcon icon={['far','smile']}/>, <FontAwesomeIcon icon={['far','smile-beam']}/> ]}
-            fullSymbol={[<FontAwesomeIcon icon="sad-tear"/>, <FontAwesomeIcon icon="frown"/>, <FontAwesomeIcon icon="meh"/>, <FontAwesomeIcon icon="smile"/>, <FontAwesomeIcon icon="smile-beam"/> ]}
-        />}
+            <h5>{this.props.question}</h5>
+            {<Rating
+            emptySymbol={[<FontAwesomeIcon icon={['far','sad-tear']} size="3x" style={{margin: "3px"}}/>, <FontAwesomeIcon icon={['far','frown']} size="3x" style={{margin: "3px"}}/>, <FontAwesomeIcon icon={['far','meh']} size="3x" style={{margin: "3px"}}/>, <FontAwesomeIcon icon={['far','smile']} size="3x" style={{margin: "3px"}}/>, <FontAwesomeIcon icon={['far','smile-beam']} size="3x" style={{margin: "3px"}}/> ]}
+            fullSymbol={[<FontAwesomeIcon icon="sad-tear" size="3x" style={{margin: "3px"}}/>, <FontAwesomeIcon icon="frown" size="3x" style={{margin: "3px"}}/>, <FontAwesomeIcon icon="meh" size="3x" style={{margin: "3px"}}/>, <FontAwesomeIcon icon="smile" size="3x" style={{margin: "3px"}}/>, <FontAwesomeIcon icon="smile-beam" size="3x" style={{margin: "3px"}}/> ]}
+            />}
         </div>
       );
     }
 }
   
 
-  
-
-
 
 
 export default ResetRating;
 
-// <Rating
-//   emptySymbol={['fa fa-star-o fa-2x', 'fa fa-heart-o fa-2x']}
-//   fullSymbol={['fa fa-star fa-2x', 'fa fa-heart fa-2x']}
-// />

@@ -8,10 +8,14 @@ function App() {
   return (
     <div className="App">
         <h2>Let's chat! How are you feeling today?</h2>
-        <p>I've been feeling relaxed</p>
-        <ResetRating />
-        <p>I've been feeling distracted</p>
-        <ResetRating />
+        <br/>
+        <br/>
+        <ResetRating question={"I've been feeling relaxed"} />
+        <br/>
+        <br/>
+        <ResetRating question={"I've been feeling distracted"} />
+        <br/>
+        <br/>
         <Journal/>
     </div>
   );
