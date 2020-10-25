@@ -15,12 +15,14 @@ class ResetRating extends Component {
   
     render() {
       return (
-        <div>
-            <h5>{this.props.question}</h5>
-            {<Rating
-            emptySymbol={[<FontAwesomeIcon icon={['far','sad-tear']} size="3x" style={{margin: "3px"}}/>, <FontAwesomeIcon icon={['far','frown']} size="3x" style={{margin: "3px"}}/>, <FontAwesomeIcon icon={['far','meh']} size="3x" style={{margin: "3px"}}/>, <FontAwesomeIcon icon={['far','smile']} size="3x" style={{margin: "3px"}}/>, <FontAwesomeIcon icon={['far','smile-beam']} size="3x" style={{margin: "3px"}}/> ]}
-            fullSymbol={[<FontAwesomeIcon icon="sad-tear" size="3x" style={{margin: "3px"}}/>, <FontAwesomeIcon icon="frown" size="3x" style={{margin: "3px"}}/>, <FontAwesomeIcon icon="meh" size="3x" style={{margin: "3px"}}/>, <FontAwesomeIcon icon="smile" size="3x" style={{margin: "3px"}}/>, <FontAwesomeIcon icon="smile-beam" size="3x" style={{margin: "3px"}}/> ]}
-            />}
+        <div style={{paddingTop: "0.3em"}}>
+            <h5 style={{textAlign: "left"}}>{this.props.question}</h5>
+            <div style={{backgroundColor: "#FDECE6", padding: "0.3em"}}>
+                {<Rating
+                emptySymbol={[<FontAwesomeIcon icon={['far','sad-tear']} size="3x" style={{margin: "3px"}}/>, <FontAwesomeIcon icon={['far','frown']} size="3x" style={{margin: "3px"}}/>, <FontAwesomeIcon icon={['far','meh']} size="3x" style={{margin: "3px"}}/>, <FontAwesomeIcon icon={['far','smile']} size="3x" style={{margin: "3px"}}/>, <FontAwesomeIcon icon={['far','smile-beam']} size="3x" style={{margin: "3px"}}/> ]}
+                fullSymbol={[<FontAwesomeIcon icon="sad-tear" size="3x" style={{margin: "3px"}}/>, <FontAwesomeIcon icon="frown" size="3x" style={{margin: "3px"}}/>, <FontAwesomeIcon icon="meh" size="3x" style={{margin: "3px"}}/>, <FontAwesomeIcon icon="smile" size="3x" style={{margin: "3px"}}/>, <FontAwesomeIcon icon="smile-beam" size="3x" style={{margin: "3px"}}/> ]}
+                />}
+            </div>
         </div>
       );
     }

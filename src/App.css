@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  color: #3C2442;
+  padding: 2.5em;
+  font-family: 'PT Sans Narrow', sans-serif;
 }
 
 .App-logo {
