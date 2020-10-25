@@ -9,20 +9,27 @@ import { faClock } from '@fortawesome/free-regular-svg-icons'
 import { faMicrophone } from '@fortawesome/free-solid-svg-icons'
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
 import { faUserCircle } from '@fortawesome/free-regular-svg-icons'
-
+import history from './History';
 
 library.add(faCalendarAlt, faClock, faMicrophone, faAngleDown, faUserCircle);
 
 class Journal extends Component {
+
+
+    newPage = () => {
+        history.push('/thanks');
+        window.location.reload();
+    }
+
     render() {
         return (
             <div className='container'>
                 <div>
                     <div className='float-left'>
-                        <FontAwesomeIcon icon={['far', 'user-circle']} size="3x"/>
+                        <FontAwesomeIcon icon={['far', 'user-circle']} size="3x" style={{marginRight: "0.3rem"}}/>
                     </div>
                     <div>
-                        <h4> Take a moment to express your thoughts and feelings</h4>
+                        <h5 style={{textAlign: "left"}}> Take a moment to express your thoughts and feelings</h5>
                     </div>
                 </div>
                 <br/>
@@ -38,7 +45,7 @@ class Journal extends Component {
                     <FontAwesomeIcon className='float-right' id='microphone' icon={['fas', 'microphone']} size="2x" />
                     <br />
                 </Form.Group>               
-                <Button block variant="primary">Finish Checking-In</Button>{' '}
+                <Button block variant="primary" style={{backgroundColor: "#581669"}} onClick={this.newPage} >Finish Checking-In</Button >{' '}
             </div>
         );
     }
