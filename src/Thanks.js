@@ -7,10 +7,11 @@ import './App.css';
 
 class Thanks extends Component {
 
+
     render() {
         return (
-            <div style={{padding: "2rem"}}>
-                <h3 style={{textAlign: "left", paddingBottom: "0.3rem", color: "#581669"}}>Thank you for checking in Vanessa!</h3>
+            <div style={{padding: "2rem"}} >
+                <h3 style={{textAlign: "left", paddingBottom: "0.3rem", color: "#581669"}}>Thank you for checking in!</h3>
                 <h5 style={{textAlign: "left", paddingBottom: "0.3rem", color: "#581669"}}>You are positively contributing to your wellbeing.</h5>
             </div>
         );
